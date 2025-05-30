@@ -9,6 +9,7 @@
       <ToneOfVoice />
       <UsageExample />
     </main>
+    <Footer />
   </div>
 </template>
 
@@ -20,6 +21,7 @@ import LogoBlock from './components/views/LogoBlock.vue';
 import VisualElements from './components/views/VisualElements.vue';
 import ToneOfVoice from './components/views/ToneOfVoice.vue';
 import UsageExample from './components/views/UsageExample.vue';
+import Footer from './components/views/Footer.vue';
 </script>
 
 <style scoped>
@@ -38,5 +40,21 @@ import UsageExample from './components/views/UsageExample.vue';
   background-attachment: fixed;
   min-height: 100vh;
   padding: 64px 0;
+}
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .brandbook {
+    color: black;
+    background: white;
+    box-shadow: none;
+  }
+
+  button, footer {
+    display: none !important;
+  }
 }
 </style>
