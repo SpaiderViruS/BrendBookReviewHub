@@ -21,17 +21,17 @@
 const examples = [
   {
     title: 'Карточка фильма',
-    img: new URL('@/assets/examples/movie-card.png', import.meta.url).href,
+    img: new URL('@/assets/examples/FilmCard.png', import.meta.url).href,
     note: 'Отображает постер, название и рейтинг'
   },
   {
     title: 'Баннер с подборкой',
-    img: new URL('@/assets/examples/banner.png', import.meta.url).href,
+    img: new URL('@/assets/examples/Podborka.png', import.meta.url).href,
     note: 'Используется в промо или главной странице'
   },
   {
     title: 'Мобильный интерфейс',
-    img: new URL('@/assets/examples/mobile-ui.png', import.meta.url).href,
+    img: new URL('@/assets/examples/MobileView.png', import.meta.url).href,
     note: 'Версия сайта для смартфонов'
   }
 ]

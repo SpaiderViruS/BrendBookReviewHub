@@ -5,8 +5,8 @@
 
     <div class="grid">
       <div class="element" v-for="el in elements" :key="el.title">
-        <div class="preview" :style="{ backgroundColor: el.bg }">
-          <img :src="el.img" :alt="el.title" />
+        <div class="preview-icon" :style="{ backgroundColor: el.bg }">
+          <i :class="`mdi ${el.icon}`"></i>
         </div>
         <h3>{{ el.title }}</h3>
         <p class="note">{{ el.note }}</p>
@@ -18,22 +18,34 @@
 <script setup>
 const elements = [
   {
-    title: 'Геймпад',
-    img: new URL('@/assets/icons/gamepad.png', import.meta.url).href,
-    note: 'Используется в карточках игр',
-    bg: '#0f3460'
+    title: 'Поиск',
+    icon: 'mdi-magnify',
+    note: 'Используется в верхней панели для поиска контента',
+    bg: '#2a2a40'
   },
   {
-    title: 'Книга',
-    img: new URL('@/assets/icons/book.png', import.meta.url).href,
-    note: 'Для раздела с визуальными новеллами / мангой',
+    title: 'Рейтинг',
+    icon: 'mdi-star',
+    note: 'Отображает оценку пользователя к фильму или игре',
     bg: '#1e1e2f'
   },
   {
-    title: 'Хлопушка',
-    img: new URL('@/assets/icons/clapper.png', import.meta.url).href,
-    note: 'Обозначает фильмы и сериалы',
-    bg: '#2a2a40'
+    title: 'Отзывы',
+    icon: 'mdi-comment-text',
+    note: 'Иконка используется для обозначения раздела отзывов',
+    bg: '#0f3460'
+  },
+  {
+    title: 'Категория "Игры"',
+    icon: 'mdi-gamepad-variant',
+    note: 'Визуально подчёркивает карточки с видеоиграми',
+    bg: '#4b4b6d'
+  },
+  {
+    title: 'Категория "Фильмы"',
+    icon: 'mdi-movie-open',
+    note: 'Обозначает медиа-файлы: кино, сериалы и т.п.',
+    bg: '#5d2d4b'
   }
 ]
 </script>
@@ -58,7 +70,7 @@ const elements = [
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .element {
@@ -75,6 +87,17 @@ const elements = [
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 8px;
+}
+
+.preview-icon {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: white;
+  border-radius: 12px;
 }
 
 .preview img {
