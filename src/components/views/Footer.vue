@@ -12,7 +12,7 @@ async function downloadPDF() {
   const el = document.querySelector('.brandbook')
   const canvas = await html2canvas(el, { scale: 2, useCORS: true })
 
-  const imgData = canvas.toDataURL('image/png')
+  const imgData = canvas.toDataURL('image/jpeg')
 
   const pdf = new jsPDF('p', 'mm', 'a4')
   const pageWidth = pdf.internal.pageSize.getWidth()
