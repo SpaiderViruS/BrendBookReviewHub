@@ -1,7 +1,7 @@
 <template>
   <main class="brandbook">
     <section class="intro">
-      <h1>Брендбук проекта "MadiaHub"</h1>
+      <h1>Брендбук проекта "MediaHub"</h1>
       <p class="subtitle">Сайт отзывов на фильмы, сериалы, игры и аниме</p>
 
       <div class="section">
